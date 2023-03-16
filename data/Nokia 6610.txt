@@ -1,14 +1,3 @@
-*****************************************************************************
-* Annotated by: Minqing Hu and Bing Liu, 2004.
-*		Department of Computer Sicence
-*               University of Illinois at Chicago              
-*
-* Product name: Nokia 6610
-* Review Source: amazon.com
-*
-* See Readme.txt to find the meaning of each symbol. 
-*****************************************************************************
-
 [t]excellent phone , excellent service . 
 ##i am a business user who heavily depend on mobile service . 
 phone[+3], work[+2]##there is much which has been said in other reviews about the features of this phone , it is a great phone , mine worked without any problems right out of the box . 

@@ -1,14 +1,3 @@
-*****************************************************************************
-* Annotated by: Minqing Hu and Bing Liu, 2004.
-*		Department of Computer Sicence
-*               University of Illinois at Chicago              
-*
-* Product name: Creative Labs Nomad Jukebox Zen Xtra 40GB
-* Review Source: amazon.com
-*
-* See Readme.txt to find the meaning of each symbol. 
-*****************************************************************************
-
 [t] a quick update to the new zen nx ? 
 ##this is an edited review , now that i have had time to use the device . 
 affordability[+3]##while , there are flaws with the machine , the xtra gets five stars because of its affordability . 

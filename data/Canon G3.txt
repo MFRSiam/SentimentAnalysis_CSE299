@@ -1,14 +1,3 @@
-*****************************************************************************
-* Annotated by: Minqing Hu and Bing Liu, 2004.              
-*		Department of Computer Sicence
-*               University of Illinios at Chicago
-*
-* Product name: Canon G3
-* Review Source: amazon.com
-*
-* See Readme.txt to find the meaning of each symbol. 
-*****************************************************************************
-
 [t]excellent picture quality / color 
 canon powershot g3[+3]##i recently purchased the canon powershot g3 and am extremely satisfied with the purchase . 
 use[+2]##the camera is very easy to use , in fact on a recent trip this past week i was asked to take a picture of a vacationing elderly group . 
