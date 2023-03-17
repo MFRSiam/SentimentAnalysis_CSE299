@@ -17,11 +17,15 @@ data = data_1 + data_2 + data_3 + data_4 + data_5
 
 temp_data = DevideBySentence(data)
 # Convert a List of List into a singluar List
-sentence_data = ConvertListOfReviewOfListOfSentenceToListOfSentence(temp_data)
+sentence_list = ConvertListOfReviewOfListOfSentenceToListOfSentence(temp_data)
+
+# Extract Data In a Excell File
+ExtractData(sentence_list)
+
 # Remove Annotated Features in the data
-sentence_data = Remove_Feature(sentence_data)
+sentence_data_with_annotation = Remove_Feature(sentence_list)
 # Remove Annotations
-sentence_data = Remove_Annotations(sentence_data)
+sentence_data = Remove_Annotations(sentence_data_with_annotation)
 
 # print(sentence_data)
 
