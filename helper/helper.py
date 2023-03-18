@@ -65,7 +65,7 @@ def ExtractData(data:list, cleaned_data:list, xlFile:xlsxwriter.Workbook):
             sentiment_value_txt = re.findall(r'\b\w+\[[+-]?\d+\]', sentence)
             separator = ", "
             result = separator.join(sentiment_value_txt)
-            xlSheet.write(row,col,result)
+            xlSheet.write(row+1,col,result)
             col += 1
         row += 1
     
