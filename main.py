@@ -18,14 +18,17 @@ data = data_1 + data_2 + data_3 + data_4 + data_5
 temp_data = DevideBySentence(data)
 # Convert a List of List into a singluar List
 sentence_list = ConvertListOfReviewOfListOfSentenceToListOfSentence(temp_data)
-
-# Extract Data In a Excell File
-ExtractData(sentence_list)
+raw_sentence_data = sentence_list[:]
 
 # Remove Annotated Features in the data
 sentence_data_with_annotation = Remove_Feature(sentence_list)
 # Remove Annotations
 sentence_data = Remove_Annotations(sentence_data_with_annotation)
+sentence_data = Remove_Excess_Punctuation(sentence_data)
+# Extract Data In a Excell File
+xlFile = xlsxwriter.Workbook("data.xlsx")
+ExtractData(raw_sentence_data,sentence_data,xlFile)
+
 
 # print(sentence_data)
 
@@ -46,5 +49,11 @@ for sentence in sentence_data:
     filtered_sentence = ' '.join(filtered_words)
     data_without_stopwords.append(filtered_sentence)
 
+SimpleExtractData(data_without_stopwords,xlFile,name="Without Stopwords")
+
+
 for i in data_without_stopwords:
     print(i)
+
+
+xlFile.close()

@@ -44,24 +44,35 @@ def Remove_Annotations(sentences: list):
         cleaned_sentences.append(cleaned_sentence)
     return cleaned_sentences
 
-def ExtractData(data:list):
-    xlFile = xlsxwriter.Workbook("data.xlsx")
+def Remove_Excess_Punctuation(sentences:list):
+    cleaned_sentence = [s.replace(',','').replace(':','') for s in sentences]
+    without_empty = [s for s in sentences if s.strip()]
+    return cleaned_sentence
+
+def ExtractData(data:list, cleaned_data:list, xlFile:xlsxwriter.Workbook):
     xlSheet = xlFile.add_worksheet("Extracted Data")
     row = 0
 
-    for sentence in data:
+    for i, sentence in enumerate(data):
         col = 0
-        xlSheet.write(row,col,sentence)
+        xlSheet.write(row,col,cleaned_data[i])
         col += 1
         sentiment_value =  re.search(r'\b\w+\[[+-]?\d+\]',  sentence)
         if sentiment_value:
             sentiment_value_txt = re.findall(r'\b\w+\[[+-]?\d+\]', sentence)
-            for val in sentiment_value_txt:
-                xlSheet.write(row,col,val)
-                col += 1
-        
-        
+            separator = ", "
+            result = separator.join(sentiment_value_txt)
+            xlSheet.write(row,col,result)
+            col += 1
         row += 1
     
-    xlFile.close()
+    
+
+def SimpleExtractData(data:list,xlFile:xlsxwriter.Workbook,name:str):
+    xlSheet = xlFile.add_worksheet(name)
+    row = 0
+    col = 0
+    for sentence in data:
+        xlSheet.write(row,col,sentence)
+        row += 1
     
