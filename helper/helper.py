@@ -1,8 +1,11 @@
 
 #open The Files
 
+# For RegEX
 import re
+# For Excell File Management
 import xlsxwriter
+
 
 def ReadAFileAndDevideByReview(filename : str):
     # read the file and split it into sections baseon the review

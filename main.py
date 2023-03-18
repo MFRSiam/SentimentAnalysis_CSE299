@@ -49,11 +49,13 @@ for sentence in sentence_data:
     filtered_sentence = ' '.join(filtered_words)
     data_without_stopwords.append(filtered_sentence)
 
+# Save The Data Without Stopwords
 SimpleExtractData(data_without_stopwords,xlFile,name="Without Stopwords")
 
 
-for i in data_without_stopwords:
-    print(i)
+# For Debug 
+# for i in data_without_stopwords:
+#     print(i)
 
 
 xlFile.close()
