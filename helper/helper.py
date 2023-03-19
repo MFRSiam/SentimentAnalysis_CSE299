@@ -67,6 +67,13 @@ def ExtractData(data:list, cleaned_data:list, xlFile:xlsxwriter.Workbook):
             result = separator.join(sentiment_value_txt)
             xlSheet.write(row+1,col,result)
             col += 1
+        extra_annotation = re.search(r'\[(?:u|p|s|cc|cs)\]|\[/(?:u|p|s|cc|cs)\]',sentence)
+        if extra_annotation:
+            extra_annotation_txt = re.findall(r'\[(?:u|p|s|cc|cs)\]|\[/(?:u|p|s|cc|cs)\]',sentence)
+            separator = ", "
+            result = separator.join(extra_annotation_txt)
+            xlSheet.write(row+1,col,result)
+            col += 1
         row += 1
     
     
