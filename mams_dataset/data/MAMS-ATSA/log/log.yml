@@ -1,0 +1,30 @@
+num_categories: 3
+oov_size: 0
+test_data:
+  aspect_avg_len: 1.3046407185628743
+  aspect_max_len: 10
+  negative: 329
+  neutral: 607
+  positive: 400
+  sentence_avg_len: 29.005988023952096
+  sentence_max_len: 69
+  total: 1336
+train_data:
+  aspect_avg_len: 1.2895583765421061
+  aspect_max_len: 10
+  negative: 2764
+  neutral: 5042
+  positive: 3380
+  sentence_avg_len: 27.80672268907563
+  sentence_max_len: 70
+  total: 11186
+val_data:
+  aspect_avg_len: 1.3198198198198199
+  aspect_max_len: 8
+  negative: 325
+  neutral: 604
+  positive: 403
+  sentence_avg_len: 28.91141141141141
+  sentence_max_len: 68
+  total: 1332
+vocab_size: 7895
