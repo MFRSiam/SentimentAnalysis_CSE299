@@ -55,27 +55,44 @@ def Remove_Excess_Punctuation(sentences:list):
 def ExtractData(data:list, cleaned_data:list, xlFile:xlsxwriter.Workbook):
     xlSheet = xlFile.add_worksheet("Extracted Data")
     row = 0
-
     for i, sentence in enumerate(data):
         col = 0
-        xlSheet.write(row,col,cleaned_data[i])
-        col += 1
         sentiment_value =  re.search(r'\b\w+\[[+-]?\d+\]',  sentence)
         if sentiment_value:
+            xlSheet.write(row,col,cleaned_data[i])
+            col += 1
             sentiment_value_txt = re.findall(r'\b\w+\[[+-]?\d+\]', sentence)
+            for aspects in sentiment_value_txt:
+                match = re.search(r'[\+\-]\d+', aspects)
+            plain_aspects = [re.sub(r'\[.*?\]', '', item) for item in sentiment_value_txt]
+            numbers = []
+            if match:
+                numbers.append(int(match.group()))
+            total = sum(numbers)
+            if total > 0:
+                xlSheet.write(row+1,col,"positive")
+                col+=1
+            elif total < 0:
+                xlSheet.write(row+1,col,"negative")
+                col+=1
+            else:
+                xlSheet.write(row+1,col,"neutral")
+                col+=1
             separator = ", "
+            result = separator.join(plain_aspects)
+            xlSheet.write(row+1,col,result)
+            col += 1
             result = separator.join(sentiment_value_txt)
             xlSheet.write(row+1,col,result)
             col += 1
-        extra_annotation = re.search(r'\[(?:u|p|s|cc|cs)\]|\[/(?:u|p|s|cc|cs)\]',sentence)
-        if extra_annotation:
-            extra_annotation_txt = re.findall(r'\[(?:u|p|s|cc|cs)\]|\[/(?:u|p|s|cc|cs)\]',sentence)
-            separator = ", "
-            result = separator.join(extra_annotation_txt)
-            xlSheet.write(row+1,col,result)
-            col += 1
-        row += 1
-    
+            extra_annotation = re.search(r'\[(?:u|p|s|cc|cs)\]|\[/(?:u|p|s|cc|cs)\]',sentence)
+            if extra_annotation:
+                extra_annotation_txt = re.findall(r'\[(?:u|p|s|cc|cs)\]|\[/(?:u|p|s|cc|cs)\]',sentence)
+                separator = ", "
+                result = separator.join(extra_annotation_txt)
+                xlSheet.write(row+1,col,result)
+                col += 1
+            row += 1
     
 
 def SimpleExtractData(data:list,xlFile:xlsxwriter.Workbook,name:str):
