@@ -14,6 +14,12 @@ data_5 = ReadAFileAndDevideByReview("data/Nokia 6610.txt")
 data = data_1 + data_2 + data_3 + data_4 + data_5
 
 # print(len(data))
+# Delete The Empty Strings
+data = list(filter(lambda string: string != "", data))
+
+# Delete The Extra Spaces
+data = [s.strip() for s in data]
+
 
 temp_data = DevideBySentence(data)
 # Convert a List of List into a singluar List
@@ -27,7 +33,11 @@ sentence_data = Remove_Annotations(sentence_data_with_annotation)
 sentence_data = Remove_Excess_Punctuation(sentence_data)
 # Extract Data In a Excell File
 xlFile = xlsxwriter.Workbook("data.xlsx")
-ExtractData(raw_sentence_data,sentence_data,xlFile)
+# Filter Out And SAVE The Processed Data
+sentence_data = ExtractData(raw_sentence_data,sentence_data,xlFile)
+
+sentence_data = [re.sub(r'\w*\d\w*', '', sentence) for sentence in sentence_data]
+
 
 
 # print(sentence_data)
@@ -51,6 +61,10 @@ for sentence in sentence_data:
 
 # Save The Data Without Stopwords
 SimpleExtractData(data_without_stopwords,xlFile,name="Without Stopwords")
+
+lemmatize_data = LemmatizeSentence(data_without_stopwords)
+
+SimpleExtractData(lemmatize_data,xlFile,name="Lemmatize Data")
 
 
 # For Debug 
