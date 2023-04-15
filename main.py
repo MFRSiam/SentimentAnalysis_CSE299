@@ -1,5 +1,6 @@
 import nltk
 from helper.helper import *
+from helper.dataToxml import *
 from nltk.corpus import stopwords
 
 # Read The Data
@@ -25,6 +26,9 @@ temp_data = DevideBySentence(data)
 # Convert a List of List into a singluar List
 sentence_list = ConvertListOfReviewOfListOfSentenceToListOfSentence(temp_data)
 raw_sentence_data = sentence_list[:]
+
+dataToXml(raw_sentence_data)
+
 
 # Remove Annotated Features in the data
 sentence_data_with_annotation = Remove_Feature(sentence_list)

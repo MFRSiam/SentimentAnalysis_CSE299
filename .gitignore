@@ -133,3 +133,10 @@ mams_dataset/data/MAMS-ATSA/processed/test.npz
 mams_dataset/data/MAMS-ATSA/processed/train.npz
 mams_dataset/data/MAMS-ATSA/processed/val.npz
 mams_dataset/data/glove.840B.300d.txt
+
+
+mams_dataset/data/MAMS-ATSA/checkpoints/
+mams_dataset/data_process/
+mams_dataset/src/
+mams_dataset/train/
+mams_dataset/train.py
