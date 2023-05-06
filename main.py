@@ -27,13 +27,19 @@ temp_data = DevideBySentence(data)
 sentence_list = ConvertListOfReviewOfListOfSentenceToListOfSentence(temp_data)
 raw_sentence_data = sentence_list[:]
 
-dataToXml(raw_sentence_data)
+
 
 
 # Remove Annotated Features in the data
 sentence_data_with_annotation = Remove_Feature(sentence_list)
+
 # Remove Annotations
 sentence_data = Remove_Annotations(sentence_data_with_annotation)
+
+sentence_data_for_xml_parse = sentence_data[:]
+
+dataToXml(raw_sentence_data,sentence_data_for_xml_parse)
+
 sentence_data = Remove_Excess_Punctuation(sentence_data)
 # Extract Data In a Excell File
 xlFile = xlsxwriter.Workbook("data.xlsx")
