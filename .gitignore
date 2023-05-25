@@ -140,3 +140,15 @@ mams_dataset/data_process/
 mams_dataset/src/
 mams_dataset/train/
 mams_dataset/train.py
+FastText-Model-For-ABSA.bin
+FastText-Model-For-ABSA.bin.wv.vectors_ngrams.npy
+
+stanfordNLP/*
+mams_dataset/data/MAMS-ACSA/checkpoints/recurrent_capsnet.pth
+mams_dataset/data/MAMS-ACSA/processed/glove.npy
+mams_dataset/data/MAMS-ACSA/processed/index2word.pickle
+mams_dataset/data/MAMS-ACSA/processed/sentiment_matrix.npy
+mams_dataset/data/MAMS-ACSA/processed/test.npz
+mams_dataset/data/MAMS-ACSA/processed/train.npz
+mams_dataset/data/MAMS-ACSA/processed/val.npz
+mams_dataset/data/MAMS-ACSA/processed/word2index.pickle

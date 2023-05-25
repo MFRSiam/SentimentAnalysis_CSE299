@@ -1,5 +1,5 @@
-mode: term
-base_path: ./data/MAMS-ATSA
+mode: category
+base_path: ./data/MAMS-ACSA
 glove_path: ./data/glove.840B.300d.txt
 sentiment_path: ./data/sentiment_dict.json
 lowercase: True

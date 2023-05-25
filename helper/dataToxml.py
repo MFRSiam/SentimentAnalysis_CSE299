@@ -5,7 +5,7 @@ import re
 def dataToXml(rawData:list,prettyData:list):
     # Create a BeautifulSoup object with xml builder
     xmlBuilder = BeautifulSoup(features="xml")
-    xmlBuilder.prettify()
+    #xmlBuilder.prettify()
     # Create the root element <books>
     sentences = xmlBuilder.new_tag("sentences")
 
