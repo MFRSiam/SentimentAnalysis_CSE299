@@ -9,3 +9,8 @@ def HomePageView(request):
         'var' : broadcaster
     }
     return render(request,'index.html', context=status)
+
+
+def AboutsPageView(request):
+    
+    return render(request,'abouts.html')
