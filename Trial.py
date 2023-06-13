@@ -298,11 +298,7 @@ checkpoint = torch.load('./My-Model.pt')
 
 
 # Set the model in evaluation mode
-model.eval()
 
-sample = "Camera is bad"
-
-aspects = ["phone", "camera", "battery", "neutral", "processor"]
 
 
 
@@ -328,8 +324,16 @@ def best_aspect(text, aspects):
     
     return aspects[np.argmax(a)]
 
-ba = best_aspect(preprocessing(sample), aspects)
 
-a = infer_processing(sample).to(config.DEVICE)
+def get_aspect_eval(sample:str):
+    model.eval()
+    aspects = ["phone", "camera", "battery", "neutral", "processor"]
+    ba = best_aspect(preprocessing(sample), aspects)
+    a = infer_processing(sample).to(config.DEVICE)
+    
+    return a , ba
+    
+
+
 
 
