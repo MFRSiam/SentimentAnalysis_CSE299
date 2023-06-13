@@ -12,13 +12,22 @@
     <link rel="stylesheet" href="{% static 'css/core.css' %}">
 </head>
 <body>
-    <div class="about">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Index</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul> 
-    </div>
+    <header>
+        <img src="{%static 'img/sa.png'%}" alt="">
+        <div class="main">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>      
+        <div class="title">
+            <h1>Sentiment Analysis</h1>
+        </div>
+        <div class="button">
+            <a href="#" class="btn">ENTER TEXT FOR ANALYSIS</a>
+        </div>
+    </header>
     {% block content %}
     {% endblock content %}
 </body>
