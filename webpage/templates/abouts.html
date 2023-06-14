@@ -1,16 +1,12 @@
 {% extends '_base.html' %}
+{% load static %}
 {% block title %}
 
 {% endblock title %}
 
 
 {% block content %}
-<div class="about">
-    <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Index</a></li>
-        <li><a href="#">Contact Us</a></li>
-    </ul> 
-</div>
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
 
 {% endblock content %}

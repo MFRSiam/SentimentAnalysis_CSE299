@@ -1,11 +1,18 @@
 {% extends '_base.html' %}
+{% load static %}
 {% block title %}
     Sentiment Analysis
 {% endblock title %}
 
 
-
 {% block content %}
-   
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+<div class="title">
+    <h1>Aspect Based Sentiment Analysis</h1>
+</div>
+<div class="button">
+    <a href="#" class="btn">ENTER TEXT FOR ANALYSIS</a>
+</div>
     
 {% endblock content %}

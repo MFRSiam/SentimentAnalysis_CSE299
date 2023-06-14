@@ -13,21 +13,16 @@
     <link rel="stylesheet" href="{% static 'css/core.css' %}">
 </head>
 <body>
+    <!-- <img src="{%static 'img/2.png'%}" alt=""> -->
+
     <header>
-        <img src="{%static 'img/sa.png'%}" alt="">
         <div class="main">
             <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li class="active"><a href="{%url 'home'%}">Home</a></li>
+                <li class="active2"><a href="{%url 'abouts'%}">About</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </div>      
-        <div class="title">
-            <h1>Sentiment Analysis</h1>
-        </div>
-        <div class="button">
-            <a href="#" class="btn">ENTER TEXT FOR ANALYSIS</a>
-        </div>
     </header>
     {% block content %}
     {% endblock content %}
