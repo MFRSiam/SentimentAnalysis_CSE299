@@ -12,15 +12,26 @@
     <h1>Aspect Based Sentiment Analysis</h1>
 </div>
 <div class="button">
-    <a href="#" class="btn">ENTER TEXT FOR ANALYSIS</a>
+    <form action="./" method="post">
+        {% csrf_token %}
+        <input class="btn" id="id_subject" type="text" name="sentence" maxlength="100" required id="id_sentence" value="Please Enter Your Sentence">
+        <!-- <input type="submit" value="Submit"> -->
+    </form>
+    
+
+
     <!-- <a href="#" class="btn">ASPECT</a> -->
     <!-- <a href="#" class="btn">SENTIMENT</a> -->
 </div>
 <div class="box1">
-    <a href="#" class="b1">SENTIMENT</a>
+    {% if show %}
+        <a href="#" class="b1">{{sentiment}}</a>
+    {% endif %}
 </div>
 <div class="box2">
-    <a href="#" class="b2">ASPECT</a>
+    {% if show %}
+    <a href="#" class="b2">{{aspect}}</a>
+    {% endif %}
 </div>
 
 
