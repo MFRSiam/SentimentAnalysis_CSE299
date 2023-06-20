@@ -83,7 +83,8 @@ body {
     transform: translate(-50%, -50%);
 }
 .title h1{
-    /* position: absolute; */
+    /*position: absolute;*/
+    /* top: 30%; */
     text-align: center;
     color: white;
     font-size: 70px;
@@ -104,8 +105,51 @@ body {
     text-decoration: none;
 }
 
+
 .btn:hover{
     background-color: white;
     color: black;
 }
+
+.box1{
+    position: absolute;
+    top: 77%;
+    left: 45%;
+    /* transform: translate(30px);  */
+}
+.b1{
+    /* top: 50%; */
+    /* transform: translate(30px); */
+    font-family:'Courier New', Courier, monospace;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+}
+.box2{
+    position: absolute;
+    top: 85%;
+    left: 46%;
+    /* transform: translate(30px);  */
+}
+.b2{
+    /* top: 60%; */
+    /* transform: translate(50px); */
+    font-family:'Courier New', Courier, monospace;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+}
+.b1:hover{
+    background-color: white;
+    color: black;
+}
+.b2:hover{
+    background-color: white;
+    color: black;
+}
+
 
