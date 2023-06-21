@@ -65,7 +65,7 @@ def preprocessing(text):
 class config:
     warnings.filterwarnings("ignore", category = UserWarning)
     IMG_SIZE = (224,224)
-    DEVICE = ("cuda" if torch.cuda.is_available() else "cpu")
+    DEVICE = "cpu"
     FOLDS = 5
     SHUFFLE = True
     BATCH_SIZE = 32
@@ -296,7 +296,7 @@ embedding_layer = get_emb_layer_with_weights(target_vocab = VOCAB, emb_model = f
 model = Model(VOCAB_SIZE, config.EMB_DIM, HIDDEN_DIM, OUTPUT_DIM, embedding_layer)
 
 # Load the model's state dictionary
-checkpoint = torch.load('./../My-Model.pt')
+checkpoint = torch.load('./../My-Model.pt',  map_location=torch.device('cpu'))
 
 
 # Set the model in evaluation mode

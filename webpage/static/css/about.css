@@ -2,3 +2,73 @@ ul li.active2 a{
     background-color: black;
     color: white;
 }
+
+/* img {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    left: 30%;
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    z-index: -1;
+} */
+
+.question {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.question h2 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-family: fantasy;
+}
+
+#design { 
+    color: black;
+    font-family: fantasy;
+    font-size: 70px; 
+}
+
+.description {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: fantasy;
+
+    background-color: transparent;
+    width: 800px;
+    border: 4px solid black;
+    border-radius: 80px;
+    padding: 30px;
+    margin: 10px;
+
+}
+
+#absa {
+    color: black;
+    font-family: fantasy;
+    font-size: 30px; 
+}
+
+.pic {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7), url(../img/try.jpg));
+
+    background-position: center;
+    background-size:cover;
+    position: relative;
+}
+

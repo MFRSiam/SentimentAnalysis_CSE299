@@ -39,3 +39,7 @@ def HomePageView(request):
 def AboutsPageView(request):
     
     return render(request,'abouts.html')
+
+def ContactUs(request):
+    
+    return render(request,'contact.html')
