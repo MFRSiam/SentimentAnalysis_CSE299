@@ -30,9 +30,11 @@ body {
 }
 
 header {
-    height: 8vh;
-    background-size: cover;
-    background-position: center;
+    height: 10vh;
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-image: url("static/img/bg.jpg") */
+    background: black; 
 }
 
 ul {
@@ -48,16 +50,16 @@ ul li {
 ul li a {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 5px 20px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 20px;
     transition: 0.6s ease;
 }
 
 ul li a:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .main {

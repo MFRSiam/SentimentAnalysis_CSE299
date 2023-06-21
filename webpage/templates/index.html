@@ -30,9 +30,9 @@
     {% endif %}
 </div>
 
-<div>
+<div class="history">
     {% for x in history %}
-        <p>{{x.sentence}} Sentiment: {{x.sentiment}} Aspect: {{x.aspect}}</p>
+        <p><span id="rand">Input:</span> {{x.sentence}};   <span id="rand">Sentiment:</span> {{x.sentiment}};   <span id="rand">Aspect:</span> {{x.aspect}}</p>
     {% endfor %}
 </div>
 

@@ -1,6 +1,6 @@
 ul li.active2 a{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 /* img {
@@ -30,7 +30,7 @@ ul li.active2 a{
 }
 
 #design { 
-    color: black;
+    color: white;
     font-family: fantasy;
     font-size: 70px; 
 }
@@ -43,7 +43,7 @@ ul li.active2 a{
 
 
     text-align: center;
-    color: black;
+    color:  black;
     font-size: 20px;
     font-family: fantasy;
 
@@ -57,31 +57,86 @@ ul li.active2 a{
 }
 
 #absa {
-    color: black;
+    color: white;
     font-family: fantasy;
     font-size: 30px; 
 }
 
-.pic {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
-    /* background-image: url('/static/img/try.jpg'); */
-    background-position: center;
-    background-size: cover;
-    position: relative;
+.tech {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.pic::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/img/try.jpg');
-    background-position: center;
-    background-size: cover;
-    opacity: 0.7;
-    z-index: -1;
+.tech h3{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-family: fantasy;
 }
+#random {
+    font-family: fantasy;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    
+} 
+
+.e1 {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    /* transform: translate(-50%, -50%); */
+}
+.e2 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    /* transform: translate(-50%, -50%); */
+}
+
+
+.i1 {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    /* transform: translate(-50%, -50%); */
+}
+.i1 img{
+    width: 150px;
+    height: 150px;
+}
+.i2 {
+    position: absolute;
+    top: 90%;
+    right: 5%;
+    /* transform: translate(-50%, -50%); */
+}
+.i2 img{
+    width: 200px;
+    height: 200px;
+}
+.i3 {
+    position: absolute;
+    top: 125%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+}
+.i3 img{
+    width: 150px;
+    height: 150px;
+}
+.i4 {
+    position: absolute;
+    top: 125%;
+    right: 10%;
+    /* transform: translate(-50%, -50%); */
+}
+.i4 img{
+    width: 150px;
+    height: 150px;
+}
+
+
