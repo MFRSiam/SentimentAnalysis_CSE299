@@ -30,6 +30,14 @@
     {% endif %}
 </div>
 
+
+<!-- hehe boi -->
+<div>
+    {% if garbage %}
+    <img src="{% static 'img/michael.jpg' %}">
+    {% endif %}
+</div>
+
 <div class="history">
     {% for x in history %}
         <p><span id="rand">Input:</span> {{x.sentence}};   <span id="rand">Sentiment:</span> {{x.sentiment}};   <span id="rand">Aspect:</span> {{x.aspect}}</p>
