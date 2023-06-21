@@ -14,7 +14,8 @@
 <div class="button">
     <form action="./" method="post">
         {% csrf_token %}
-        <input class="btn" id="id_subject" type="text" name="sentence" maxlength="100" required id="id_sentence" value="Please Enter Your Sentence">
+        <label>Please Enter Your Sentence</label>
+        <input class="btn" id="id_subject" type="text" name="sentence" maxlength="100" required id="id_sentence" >
     </form>
     
 </div>
@@ -29,6 +30,11 @@
     {% endif %}
 </div>
 
+<div>
+    {% for x in history %}
+        <p>{{x.sentence}} Sentiment: {{x.sentiment}} Aspect: {{x.aspect}}</p>
+    {% endfor %}
+</div>
 
 
     

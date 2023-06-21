@@ -1,3 +1,54 @@
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    width: 200%; /* Set the width to fill the available space */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 40px; /* Set a minimum height */
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: white;
+    color: black;
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
 
 
 ul li.active a{

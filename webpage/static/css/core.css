@@ -65,12 +65,6 @@ ul li a:hover {
     margin: auto;
 }
 
-.title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .title h1 {
     text-align: center;
@@ -79,37 +73,11 @@ ul li a:hover {
     font-family: fantasy;
 }
 
-.button {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
-.btn {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 800;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 10px 30px;
-    color: white;
-    text-decoration: none;
-    width: 100%; /* Set the width to fill the available space */
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: white;
-    color: black;
-    outline: none;
-    border-color: black;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
 
 .box1 {
     position: absolute;
-    top: 77%;
+    top: 78%;
     left: 45%;
 }
 
@@ -123,6 +91,7 @@ ul li a:hover {
     color: white;
     text-decoration: none;
 }
+
 
 .box2 {
     position: absolute;
