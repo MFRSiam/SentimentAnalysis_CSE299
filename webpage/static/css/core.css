@@ -10,10 +10,27 @@ html, body {
     padding: 0;
 }
 
- 
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 header {
-    height: 150vh;
+    height: 8vh;
     background-size: cover;
     background-position: center;
 }
@@ -48,25 +65,6 @@ ul li a:hover {
     margin: auto;
 }
 
-body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .title {
     position: absolute;
     top: 50%;
@@ -87,6 +85,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .btn {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 800;
@@ -95,11 +94,8 @@ body {
     padding: 10px 30px;
     color: white;
     text-decoration: none;
-    /* width: auto !important; */
-    transition: border-color 0.3s, box-shadow 0.3s;
-
     width: 100%; /* Set the width to fill the available space */
-    /* height: 100px; */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover,
@@ -110,13 +106,15 @@ body {
     border-color: black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
 .box1 {
     position: absolute;
     top: 77%;
     left: 45%;
 }
 
-.b1 {
+.b1,
+.b2 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 800;
     border: 1px solid black;
@@ -132,26 +130,8 @@ body {
     left: 46%;
 }
 
-.b2 {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 800;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 10px 30px;
-    color: white;
-    text-decoration: none;
-}
-
-.b1:hover {
-    background-color: white;
-    color: black;
-}
-
+.b1:hover,
 .b2:hover {
     background-color: white;
     color: black;
 }
-
-
-/* ===============ABOUT PAGE ================*/
-
